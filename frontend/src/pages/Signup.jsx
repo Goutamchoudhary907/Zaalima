@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import SignupImage from "../assets/Signup_Image.png";
+import { Link } from "react-router-dom";
 export default function Signup() {
   const [formData, setFormData] = useState({
     name: "",
@@ -190,6 +191,13 @@ export default function Signup() {
                     )}
                   </button>
                 </form>
+                <p className="text-sm text-center text-gray-600">
+                  Already have an account?{" "}
+                  <Link to="/signin" className="text-blue-600 hover:underline">
+                    Sign in here
+                  </Link>
+                </p>
+                
               </div>
             </div>
           </div>
